@@ -1,16 +1,19 @@
 import React from "react";
+import PoemsContainer from "./PoemsContainer";
 
-function Poem() {
+function Poem(poems){
+  PoemsContainer.map((element) => {
   return (
     <div>
-      <h3>Title</h3>
-      <p>Content</p>
+      <h3>{element.title}</h3>
+      <p>{element.content}</p>
       <p>
-        <strong>- By Author</strong>
+        <strong>{element.author}</strong>
       </p>
       <button>Mark as read</button>
     </div>
   );
+  })
 }
 
 export default Poem;
